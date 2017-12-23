@@ -1,0 +1,172 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+  bottom: 3rem;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+  background-color: #777;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing h1{
+  font-size:50px;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+
+header {
+  padding: 154px 0 100px;
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 156px 0 100px;
+  }
+}
+
+section {
+  padding: 150px 0;
+}
+/*
+Lists
+------------------------------*/
+.list ul, ol{
+  /*margin: 0;padding: 0;*/
+  list-style: none;
+}
+.list li {
+  background: #37BC9B;
+  color: #fff;
+  counter-increment: myCounter;
+  margin: 0 0 30px 0;
+  padding: 13px;
+  position: relative;
+  top: 1em;
+  border-radius:  0em 2px 1em 1em;
+  padding-left: 2em;
+  font-size: 1.2em;
+  font-family: Constantia;
+}
+.list li:before{
+  content: counter(myCounter, decimal-leading-zero);
+  display: inline-block;
+  text-align: center;
+  font-size: 2em;
+  line-height: 1.3em;
+  background-color:  #48CFAD;
+  padding: 10px;
+  font-weight: bold;
+  position: absolute; 
+  top: 0;
+  left: -40px;
+  border-radius: 50%;
+  font-family: exo;
+}
+
+
+.list li:nth-child(even){
+  background-color: #434A54;
+}
+
+.list li li{
+  counter-increment: myCounter2;
+}
+
+.list li li:before{
+  content: counter(myCounter2, decimal-leading-zero);
+}
+
+.list li li a{
+  color: #a47878;
+}
+/*
+Additional chips :)
+--------------------------*/
+::-moz-selection {
+  color: #fff;
+  background: #333 !important;
+}
+::selection {
+  color: #fff;
+  background: #333 !important;
+}
