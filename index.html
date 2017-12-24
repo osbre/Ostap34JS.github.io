@@ -11,14 +11,18 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles-->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/step.min.css" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111534223-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'UA-111534223-1');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-111534223-1');
     </script>
 
 </head>
@@ -53,12 +57,19 @@
         <div class="container text-center">
             <h1>Розробляю веб-сайти</h1>
             <p class="lead">Швидко.Якісно.Дешево.</p>
-            <p class="lead">    <div id="google_translate_element"></div><script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'uk', includedLanguages: 'en,ru,uk', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
-}
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-        </p>
+            <p class="lead">
+                <div id="google_translate_element"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({
+                            pageLanguage: 'uk',
+                            includedLanguages: 'en,ru,uk',
+                            layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+                        }, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </p>
         </div>
     </header>
 
@@ -74,7 +85,8 @@ function googleTranslateElementInit() {
                 <div class="col-lg-4">
                     <img src="img/284286.png" width="140" height="140">
                     <h2>Адаптивний дизайн</h2>
-                    <p>Веб сторінка підлаштовуватиметься під розміри пристрою, щоб виглядати солідно на будь якому девайсі, сайт буде добре виглядати у всіх сучасних браузерах</p>
+                    <p>Веб сторінка підлаштовуватиметься під розміри пристрою, щоб виглядати солідно на будь якому девайсі,
+                        сайт буде добре виглядати у всіх сучасних браузерах</p>
                 </div>
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
@@ -104,26 +116,6 @@ function googleTranslateElementInit() {
             <h1 class="text-center" style="font-size:55px;">
                 <b>Послуги:</b>
             </h1>
-            <div class="row featurette">
-                <div class="col-md-5">
-                    <img class="featurette-image img-fluid mx-auto" src="img/parsing.svg" data-src="holder.js/500x500/auto">
-                </div>
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">Написання парсерів.
-                        <span class="text-muted">(Грабберів контенту)</span>
-                    </h2>
-                    <p class="lead">Створення скриптів, які будуть копіювати контент з інших сайтів, тим самим, збільшуючи контент вашого
-                        сайту.
-                    </p>
-                    <p class="lead">Орієнтовна ціна
-                        <b>
-                            <i>~200грн</i>
-                        </b>
-                    </p>
-                    <p class="lead">Автоматизовані скрипти парсингу коштують дорожче.</p>
-                </div>
-            </div>
-            <hr class="featurette-divider">
             <div class="row featurette">
                 <div class="col-md-7 push-md-5">
                     <h2 class="featurette-heading">
@@ -187,7 +179,7 @@ function googleTranslateElementInit() {
                     </p>
                 </div>
             </div>
-            <hr class="featurette-divider">            
+            <hr class="featurette-divider">
             <div class="row featurette">
                 <div class="col-md-5">
                     <img class="featurette-image img-fluid mx-auto" src="img/team.svg">
