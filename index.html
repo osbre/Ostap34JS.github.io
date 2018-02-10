@@ -11,7 +11,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles-->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/step.min.css" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111534223-1"></script>
     <script>
@@ -27,10 +26,10 @@
 
 </head>
 
-<body id='#page-top'>
+<body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Ostap portfolio</a>
+            <a class="navbar-brand js-scroll-trigger" href="" onclick="scroll(0,0);">Ostap portfolio</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,11 +39,15 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#about">Про мене</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#advantages">Переваги</a>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#services">Послуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#portfolio">Портфоліо</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#developmentSteps">Етапи розробки</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#contact">Зв'язатися</a>
@@ -53,66 +56,74 @@
             </div>
         </div>
     </nav>
+
     <header class="bg-primary text-white">
         <div class="container text-center">
-            <h1>Розробляю веб-сайти</h1>
-            <p class="lead">Швидко.Якісно.Дешево.</p>
+            <h1>Професійна розробка сайтів</h1>
+            <p class="lead">Створюю продаючі сайти для Ваших бізнес проектів</p>
             <p class="lead">
-                <div id="google_translate_element"></div>
-                <script type="text/javascript">
-                    function googleTranslateElementInit() {
-                        new google.translate.TranslateElement({
-                            pageLanguage: 'uk',
-                            includedLanguages: 'en,ru,uk',
-                            layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-                        }, 'google_translate_element');
-                    }
-                </script>
-                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <a href="" data-toggle="modal" data-target="#orderModal" class="btn btn-lg btn-success">Зробити замовлення</a>
             </p>
         </div>
     </header>
 
-    <section>
+    <section id="about">
         <div class="container marketing">
+            <h1 class="text-center">Про мене</h1>
             <div class="row">
-                <div class="col-lg-4">
-                    <img src="img/428996.svg" width="140" height="140">
-                    <h2>Швидкість завантаження</h2>
-                    <p>Мої cайти завантажуються швидко, оскільки використовують мінімум ресурсів</p>
+                <div class="col-6 col-md-4">
+                    <div class="mx-auto" style="min-width: 300px;">
+                        <img src="img/me.jpeg" class="img-thumbnail">
+                    </div>
                 </div>
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <img src="img/284286.png" width="140" height="140">
-                    <h2>Адаптивний дизайн</h2>
-                    <p>Веб сторінка підлаштовуватиметься під розміри пристрою, щоб виглядати солідно на будь якому девайсі,
-                        сайт буде добре виглядати у всіх сучасних браузерах</p>
+                <div class="col-12 col-md-8 lead">
+                    <div style="padding-bottom:4px;border-bottom:4px solid #d2f71c;">
+                        <span style="color:#ffff00;background:#000;">Професійно</span> займаюся веб-програмуванням 2 роки.
+                    </div>
+                    <br>Працював з такими технологіями:
+                    <b>PHP</b>, MYSQL, PostgreSQL,
+                    <b>LARAVEL</b>, LUMEN,
+                    <b>CSS</b>,
+                    <b>HTML5</b>, LESS, SASS, Bootstrap, semantic-ui,
+                    <b>VUE.JS</b>, Zepto, Jquery, handlebars.js, wordpress.
+                    <br>
+                    <br> Цікавлять як і
+                    <b>лендінги, візитки, малосторінкові сайти</b>, так і
+                    <b>великі корпоративні проекти, інтернет-магазини, веб-портали, веб-сервіси.</b>
                 </div>
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <img src="img/safe.svg" width="140" height="140">
-                    <h2>Ваші сайти надійно захищені</h2>
-                    <p>Безкоштовний SSL сертифікат (безпека сайту) - безкоштовно</p>
-                </div>
-                <!-- /.col-lg-4 -->
             </div>
-            <!-- /.row -->
         </div>
     </section>
-    <section id="advantages">
+
+    <hr class="featurette-divider">
+
+    <section id="advantages" style='padding:50px;'>
         <div class="container marketing">
-            <h1 class="text-center">Мої переваги:</h1>
-            <ul class="list">
-                <li class="">Низькі ціни</li>
-                <li class="">Швидкість роботи</li>
-                <li class="">Надійність</li>
-            </ul>
+            <h1 class="text-center">Чому я?</h1>
+            <div class="row">
+                <div class="col">
+                    <h4>Швидко</h4>
+                    <!--<p class="lead">Дедлайн - це один з найважливіших факторів будь-якого проекту. Я завжди за цим слідкую і дотримуюся домовленості.</p>-->
+                </div>
+                <div class="col">
+                    <h4>Якісно</h4>
+                    <p class="lead"></p>
+                </div>
+                <div class="col">
+                    <h4>Дешево</h4>
+                    <p class="lead"></p>
+                </div>
+                <div class="col">
+                    <h4>Надійно</h4>
+                    <p class="lead"></p>
+                </div>
+            </div>
         </div>
         <hr class="featurette-divider">
     </section>
+
     <section id="services" class="bg-light">
         <div class="container marketing">
-            <hr class="featurette-divider">
             <h1 class="text-center" style="font-size:55px;">
                 <b>Послуги:</b>
             </h1>
@@ -120,7 +131,6 @@
                 <div class="col-md-7 push-md-5">
                     <h2 class="featurette-heading">
                         Landing page.
-                        <!--<span class="text-muted">Створення візитівки.</span>-->
                     </h2>
                     <p class="lead">Передбачає створення невеликого кілька-сторінкового сайту, наприклад - сайту візитки.</p>
                     <p class="lead">Орієнтовна ціна
@@ -151,37 +161,6 @@
             <hr class="featurette-divider">
             <div class="row featurette">
                 <div class="col-md-5">
-                    <img class="featurette-image img-fluid mx-auto" src="img/server.svg">
-                </div>
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">Розміщення сайту на хостинг </h2>
-                    <p class="lead">Вибір найкращих умов для вашого сайту з мінімальними цінами! Розміщення найрізноманітніших cms, самописних
-                        сайтів і тд на хостинг.Оплату за хостинг сплачує замовник</p>
-                    <p class="lead">Орієнтовна ціна
-                        <b>
-                            <i>~100-300грн</i>
-                        </b>
-                    </p>
-                </div>
-            </div>
-            <hr class="featurette-divider">
-            <div class="row featurette">
-                <div class="col-md-5">
-                    <img class="featurette-image img-fluid mx-auto" src="img/wordpress.svg">
-                </div>
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">Встановлення CMS</h2>
-                    <p class="lead">Встановлення CMS, написання тем для різних CMS, встановлення плагінів.</p>
-                    <p class="lead">Орієнтовна ціна
-                        <b>
-                            <i>~100-300грн</i>
-                        </b>
-                    </p>
-                </div>
-            </div>
-            <hr class="featurette-divider">
-            <div class="row featurette">
-                <div class="col-md-5">
                     <img class="featurette-image img-fluid mx-auto" src="img/team.svg">
                 </div>
                 <div class="col-md-7">
@@ -189,7 +168,22 @@
                     <p class="lead">Написання корпоративних сайтів для різних компаній.</p>
                     <p class="lead">Орієнтовна ціна
                         <b>
-                            <i>~1000-6000грн</i>
+                            <i>~3200-6000грн</i>
+                        </b>
+                    </p>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-5">
+                    <img class="featurette-image img-fluid mx-auto" src="img/shop.svg">
+                </div>
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Розробка інтернет-магазину</h2>
+                    <p class="lead"></p>
+                    <p class="lead">Орієнтовна ціна
+                        <b>
+                            <i>~5000грн</i>
                         </b>
                     </p>
                 </div>
@@ -199,27 +193,150 @@
         </div>
         <!-- /.container -->
     </section>
-    <section id="skills">
-        <div class="container text-center">
-            <h1>
-                <b>Технології, які я використовую:</b>
-            </h1>
-            <ul class="list-group notranslate" style='font-size:30px;'>
-                <li class="list-group-item">PHP, MYSQL, LARAVEL, LUMEN</li>
-                <li class="list-group-item">CSS, LESS, SASS</li>
-                <li class="list-group-item">Bootstrap, foundation, polymer, semantic-ui</li>
-                <li class="list-group-item">VUE.JS, Zepto, Jquery, handlebars.js</li>
-            </ul>
+
+
+    <section id="portfolio" class="bg-light">
+        <div class="container marketing">
+            <h1 class="text-center">Останні роботи:</h1>
+            <div class='figure-items'>
+                <a href="http://todo-laravel5.herokuapp.com/">
+                    <figure>
+                        <img src="img/todo-laravel-min.png" alt="kolibri-shop">
+                        <figcaption>
+                            <h3>Список справ</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="http://shop.kalibri.co.ua">
+                    <figure>
+                        <img src="img/kolibri-shop-min.png" alt="kolibri-shop">
+                        <figcaption>
+                            <h3>Інтернет-магазин "kolibri-shop"</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="https://germany-movies.000webhostapp.com">
+                    <figure>
+                        <img src="img/germany-movies-min.png" alt="germany-movies">
+                        <figcaption>
+                            <h3>Сайт німецьких фільмів</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
         </div>
+    </section>
+
+
+    <section id='developmentSteps'>
+        <div class="container marketing">
+            <h1 class="text-center">Як проходитиме розробка?</h1>
+            <br>
+            <br>
+            <div class="row steps">
+                <div class="col">
+                    <h4>Знайомство</h4>
+                    <p class="lead">Отримання вашого проекту</p>
+                </div>
+                <div class="col">
+                    <h4>Визначення цілей</h4>
+                    <p class="lead">Аналіз проекту та витрат</p>
+                </div>
+                <div class="col">
+                    <h4>Розробка</h4>
+                    <p class="lead">Розробка та дизайн</p>
+                </div>
+                <div class="col">
+                    <h4>Тестування</h4>
+                    <p class="lead">Тестування проекту</p>
+                </div>
+            </div>
     </section>
 
     <section id="contact" class="bg-light">
         <div class="container">
             <h1 class='text-center'>Зв'язатися:</h1>
-            <div class="mx-auto" style="width: 400px;">
-                <a href="https://goo.gl/forms/3lcO3Atz4jHCLapj1" class="btn btn-block btn-lg btn-info">Звʼязатися</a>
-                <a href="https://goo.gl/forms/NoihUs0UOHp6lfFI3" class="btn btn-lg btn-block btn-success">Зробити замовлення</a>
+            <div class="mx-auto" style="max-width: 400px;">
+                <a href="" data-toggle="modal" data-target="#contactModal" class="btn btn-block btn-lg btn-info">Звʼязатися</a>
+                <a href="" data-toggle="modal" data-target="#orderModal" class="btn btn-lg btn-block btn-success">Зробити замовлення</a>
                 <p>Або скайп: Ostap34PHP</p>
+            </div>
+        </div>
+        <!-- Modal contact -->
+        <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Зв'язатися:</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfD6iJVoR9xTotVTdidc6ryXnzpCyXirnpWeCwg5urNGdYEgQ/formResponse" target="_self"
+                        method="POST" id="mG61Hd">
+
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="name">Ваше ім'я та прізвище</label>
+                                <input type="text" class="form-control" id="name" name="entry.351789121" placeholder="Ваше ім'я та прізвище" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Електронна пошта</label>
+                                <input type="email" class="form-control" id="email" name="entry.664619718" placeholder="Електронна пошта" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="text">Текст</label>
+                                <textarea name="entry.1268594845" class="form-control" id=text cols="30" rows="10"></textarea>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Не зберегти</button>
+                            <button type="submit" class="btn btn-primary">Відправити</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Modal order-->
+        <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="orderModalLongTitle">Зробити замовлення</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSckXcSGqRoM2p_tHM2H07agZEdtNfS-61LxmjNOWNJbCu-oRQ/formResponse" target="_self"
+                        method="POST" id="mG61Hd">
+
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="name">Ваше ім'я та прізвище</label>
+                                <input type="text" class="form-control" id="name" name="entry.771536983" placeholder="Ваше ім'я та прізвище" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Електронна пошта</label>
+                                <input type="email" class="form-control" id="email" name="emailAddress" placeholder="Електронна пошта" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="text">Текст, ТЗ - технічне завдання</label>
+                                <textarea name="entry.945288570" class="form-control" id=text cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="contacts">Ваші контакти (Skype, telegram і тд)</label>
+                                <input type="text" class="form-control" id="contacts" name="entry.1325903336" placeholder="Ваші контакти (Skype, telegram і тд)"
+                                    required>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Не зберегти</button>
+                            <button type="submit" class="btn btn-primary">Відправити</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
