@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Ostap Portfolio">
+    <meta name="description" content="Створюю продаючі сайти для Ваших бізнес проектів">
     <meta name="author" content="Ostap Programmer">
     <title>Ostap Portfolio</title>
     <!-- Bootstrap core CSS -->
@@ -23,7 +23,6 @@
 
         gtag('config', 'UA-111534223-1');
     </script>
-
 </head>
 
 <body>
@@ -60,7 +59,7 @@
     <header class="bg-primary text-white">
         <div class="container text-center">
             <h1>Професійна розробка сайтів</h1>
-            <p class="lead">Створюю продаючі сайти для Ваших бізнес проектів</p>
+            <p class="lead typeit">Створюю продаючі сайти для Ваших бізнес проектів</p>
             <p class="lead">
                 <a href="" data-toggle="modal" data-target="#orderModal" class="btn btn-lg btn-success">Зробити замовлення</a>
             </p>
@@ -223,6 +222,14 @@
                         </figcaption>
                     </figure>
                 </a>
+                <a href="http://www.shaalavim.com/">
+                    <figure>
+                        <img src="img/hebrew-calendar-wordpress.png" alt="Віджет єврейського календаря для wordpress">
+                        <figcaption>
+                            <h3>Віджет єврейського календаря для wordpress</h3>
+                        </figcaption>
+                    </figure>
+                </a>
                 <a href="https://germany-movies.000webhostapp.com">
                     <figure>
                         <img src="img/germany-movies-min.png" alt="germany-movies">
@@ -351,6 +358,7 @@
 
     <!-- Bootstrap core JavaScript-->
     <script src="js/bootstrap-native-v4.min.js"></script>
+    <script>var typingSpeed = 50, blinkingSpeed = 400, elements = document.getElementsByClassName("typeit"); function typeElement(e) { if (!(null == elements || e >= elements.length)) { var n = elements[e], t = n.textContent; n.innerHTML = "", typeStringInside(n, t), typeElement(e + 1) } } function typeStringInside(e, n) { null != n && "" != n && typeCharacterInsideElement(0, e, n) } function typeCharacterInsideElement(e, n, t) { if (e >= t.length) typeBlinkingPipe(n); else { var i = t[e]; setTimeout(function () { n.innerHTML = n.innerHTML + i, typeCharacterInsideElement(e + 1, n, t) }, typingSpeed) } } function typeBlinkingPipe(e) { var n = e.innerHTML + '<span class="blinking" style="visibility: visible;">|</span>'; setTimeout(function () { e.innerHTML = n, startBlinkingElement(e.getElementsByClassName("blinking")[0]) }, typingSpeed) } function startBlinkingElement(e) { setInterval(function () { var n = e.style.visibility; e.style.visibility = "hidden" == n ? "visible" : "hidden" }, blinkingSpeed) } typeElement(0);</script>
 </body>
 
 </html>
