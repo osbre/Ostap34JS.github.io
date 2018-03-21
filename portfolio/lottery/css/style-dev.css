@@ -358,7 +358,7 @@ img{
 .header-1{
     height:100vh;
     position:relative;
-    background:url(/images/2.jpg);
+    background:url(../images/2.jpg);
     background-size:cover
 }
 .header-1 .header-1-content{
