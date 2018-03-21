@@ -2,219 +2,242 @@
 <html>
 
 <head>
-    <title>Lottety</title>
-    <meta charset='utf-8'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/aos.css">
-    <script src="web3.min.js"></script>
+  <title>Lottety</title>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/aos.css">
+  <script src="web3.min.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111534223-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111534223-1');
+  </script>
 </head>
 
 <body style="overflow: auto;padding-right:0px !important;">
-    <div class="page-holder">
-        <div id="home" class="header-1 demo-1">
-            <div class="container">
-                <div class="header-1-content row">
-                    <div class="col-md-12 col-sm-12 content text-center">
-                        <h1 class="has-line text-white" data-aos="flip-down" id='title_ru'>
-                          Очередь за криптовалютой
-                        </h1>
-                        <h1 class="has-line text-white" data-aos="flip-down" id='title_en' style='display:none;'>
-                          The easy english title
-                        </h1>
-                        <p class="lead text-white" id='subtitle_ru'>
-                            Это основанная на смартконтракте эфириума, система, дающая возможность ее участникам увеличить свой капитал криптовалют.
-                        </p>
-                        <p class="lead text-white" id='subtitle_en' style='display:none;'>
-                          The easy very-long english subtitle
-                        </p>
-                        <div class="theme-btn">
-                            <a href="#" id='btn1_ru' class="more-btn" data-toggle="modal" data-target="#description_modal" data-aos="flip-right">Принцип работы</a>
-                            <a href="#" id='btn2_ru' class="more-btn" data-toggle="modal" data-target="#modal_video" data-aos="flip-left">Просмотр видео</a>
-                            <a style='display:none;' id='btn1_en' href="#" class="more-btn" data-toggle="modal" data-target="#description_modal_en" data-aos="flip-right">Principle of operation</a>
-                            <a style='display:none;' id='btn2_en' href="#" class="more-btn" data-toggle="modal" data-target="#modal_video_en" data-aos="flip-left">View video</a>
-                        </div>
-                        <a href="#about" class="btn btn-circle js-scroll-trigger">
-                            <img src="images/angle-double-down.svg">
-                        </a>
-                    </div>
-                    <!-- Modal description-->
-                    <div class="modal fade" id="description_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="description_modal_label">Принцип работы</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Modal video -->
-                    <div class="modal fade" id="modal_video" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="video_modal_label">Видео</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/zxSNsKKVLwk"></iframe>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Modal description en-->
-                    <div class="modal fade" id="description_modal_en" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="description_modal_label">english...</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">english...</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Modal video en -->
-                    <div class="modal fade" id="modal_video_en" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="video_modal_label">english...</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/zxSNsKKVLwk"></iframe>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">english...</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <section class="about" id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="text-holder">
-
-                        <div class="col-lg-12 mainInfo">
-                            <h1 data-aos="fade-right">Hi morning</h1>
-                            <div id="intervalErrorMessage"></div>
-                            <div id="contractAddress" data-aos="fade-left">Please send money to here 0xcb2abadfdb3ddf4fda41a4bb5a79cb32a1df84ad</div>
-                        </div>
-
-                        <div class="row" style='font-size:23px;'>
-                            <div class="col-lg-4 infoItem">
-                                <span>Q </span> 
-                                <div id="qView" data-aos="flip-left">
-                                    <div class="progress">
-                                      <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 infoItem">
-                                <span id='next_winner_ru'>Следующий победитель</span> 
-                                <span id='next_winner_en' style='display:none;'>Next winner</span> 
-                                <div id="nView" data-aos="flip-up">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:100%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 infoItem">
-                              <span id='price_ru'>Цена</span>
-                              <span id='price_en' style='display:none;'>Price</span> 
-                                <div id="priceView" data-aos="flip-right">
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width:100%;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-lg" style="overflow: auto;width:700px;height:338px;">
-                            <table class='table table-sm'>
-                                <thead>
-                                  <th id='th1_ru'>Очередь:</th>
-                                  <th id='th1_en' style='display:none;'>Queue:</th>
-                                </thead>
-                                <tbody id='receiveds_payment' class='d-flex flex-column-reverse'>
-
-                                </tbody>
-                            </table> 
-                          </div>
-
-                          <div class="col-lg">
-                            <table class='table table-sm'>
-                                <thead>
-                                  <th id='th2_ru'>Cледующий на выплату:</th>
-                                  <th id='th2_en' style='display:none;'>Next to payment:</th>
-                                </thead>
-                                <tbody id='NextToPayment' class='d-flex flex-column-reverse'>
-
-                                </tbody>
-                            </table> 
-                          </div>
-
-                          <div class="col-lg" style="overflow: auto;width:700px;height:338px;">
-                            <table class='table table-sm'>
-                                <thead>
-                                  <th id='th3_ru'>Получившие выплату:</th>
-                                  <th id='th3_en' style='display:none;'>Those who received payment:</th>
-                                </thead>
-                                <tbody id='arrayView' class='d-flex flex-column-reverse'>
-
-                                </tbody>
-                            </table> 
-                          </div>
-                        </div>
-                         
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <footer class='bg-dark'>
+  <div class="page-holder">
+    <div id="home" class="header-1 demo-1">
       <div class="container">
-        <p class="text-muted" id='footer_ru'>2018. &copy; Все права защищены</p>
-        <p class="text-muted" id='footer_en' style='display:none;'>2018. &copy; All rights reserved</p>
+        <div class="header-1-content row">
+          <div class="col-md-12 col-sm-12 content text-center">
+            <h1 class="has-line text-white" data-aos="flip-down" id='title_ru'>
+              Очередь за криптовалютой
+            </h1>
+            <h1 class="has-line text-white" data-aos="flip-down" id='title_en' style='display:none;'>
+              The easy english title
+            </h1>
+            <p class="lead text-white" id='subtitle_ru'>
+              Это основанная на смартконтракте эфириума, система, дающая возможность ее участникам увеличить свой капитал криптовалют.
+            </p>
+            <p class="lead text-white" id='subtitle_en' style='display:none;'>
+              The easy very-long english subtitle
+            </p>
+            <div class="theme-btn">
+              <a href="#" id='btn1_ru' class="more-btn" data-toggle="modal" data-target="#description_modal" data-aos="flip-right">Принцип работы</a>
+              <a href="#" id='btn2_ru' class="more-btn" data-toggle="modal" data-target="#modal_video" data-aos="flip-left">Просмотр видео</a>
+              <a style='display:none;' id='btn1_en' href="#" class="more-btn" data-toggle="modal" data-target="#description_modal_en" data-aos="flip-right">Principle of operation</a>
+              <a style='display:none;' id='btn2_en' href="#" class="more-btn" data-toggle="modal" data-target="#modal_video_en" data-aos="flip-left">View video</a>
+            </div>
+            <a href="#about" class="btn btn-circle js-scroll-trigger">
+              <img src="images/angle-double-down.svg">
+            </a>
+          </div>
+          <!-- Modal description-->
+          <div class="modal fade" id="description_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="description_modal_label">Принцип работы</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal video -->
+          <div class="modal fade" id="modal_video" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="video_modal_label">Видео</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <iframe width="100%" height="315" src="https://www.youtube.com/embed/zxSNsKKVLwk"></iframe>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal description en-->
+          <div class="modal fade" id="description_modal_en" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="description_modal_label">english...</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">english...</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal video en -->
+          <div class="modal fade" id="modal_video_en" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="video_modal_label">english...</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <iframe width="100%" height="315" src="https://www.youtube.com/embed/zxSNsKKVLwk"></iframe>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">english...</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
-    <script src="js/detect-en.min.js"></script>
-    <script src="index.js"></script>
-    <script src="js/bootstrap-native.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    </div>
+    <section class="about" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="text-holder">
+
+            <div class="col-lg-12 mainInfo">
+              <h1 data-aos="fade-right">Hi morning</h1>
+              <div id="intervalErrorMessage"></div>
+              <div id="contractAddress" data-aos="fade-left">Please send money to here 0xcb2abadfdb3ddf4fda41a4bb5a79cb32a1df84ad</div>
+            </div>
+
+            <div class="row" style='font-size:23px;'>
+              <div class="col-lg-4 infoItem">
+                <span>Q </span>
+                <div id="qView" data-aos="flip-left">
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 infoItem">
+                <span id='next_winner_ru'>Следующий победитель</span>
+                <span id='next_winner_en' style='display:none;'>Next winner</span>
+                <div id="nView" data-aos="flip-up">
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"
+                      style="width:100%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 infoItem">
+                <span id='price_ru'>Цена</span>
+                <span id='price_en' style='display:none;'>Price</span>
+                <div id="priceView" data-aos="flip-right">
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"
+                      style="width:100%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg" style="overflow: auto;width:700px;height:338px;">
+                <table class='table table-sm'>
+                  <thead>
+                    <th id='th1_ru'>Очередь:</th>
+                    <th id='th1_en' style='display:none;'>Queue:</th>
+                  </thead>
+                  <tbody id='receiveds_payment' class='d-flex flex-column-reverse'>
+
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="col-lg">
+                <table class='table table-sm'>
+                  <thead>
+                    <th id='th2_ru'>Cледующий на выплату:</th>
+                    <th id='th2_en' style='display:none;'>Next to payment:</th>
+                  </thead>
+                  <tbody id='NextToPayment' class='d-flex flex-column-reverse'>
+
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="col-lg" style="overflow: auto;width:700px;height:338px;">
+                <table class='table table-sm'>
+                  <thead>
+                    <th id='th3_ru'>Получившие выплату:</th>
+                    <th id='th3_en' style='display:none;'>Those who received payment:</th>
+                  </thead>
+                  <tbody id='arrayView' class='d-flex flex-column-reverse'>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class='bg-dark'>
+    <div class="container">
+      <p class="text-muted" id='footer_ru'>2018. &copy; Все права защищены</p>
+      <p class="text-muted" id='footer_en' style='display:none;'>2018. &copy; All rights reserved</p>
+    </div>
+  </footer>
+  <script src="js/detect-en.min.js"></script>
+  <script src="index.js"></script>
+  <script src="js/bootstrap-native.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>
