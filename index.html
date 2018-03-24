@@ -101,32 +101,30 @@
         <div class="container marketing">
             <h2 class=" h1 text-center" style="margin-bottom: 3rem;">Чому я?</h2>
             <div class="row text-center" style="font-size:60px;">
-                <div class="col">
+                <div class="col-sm-3">
                     <p>
                         <img src="img/watches.svg" alt="">
                         <h4>Швидко</h4>
                     </p>
                     <!--<p class="lead">Дедлайн - це один з найважливіших факторів будь-якого проекту. Я завжди за цим слідкую і дотримуюся домовленості.</p>-->
                 </div>
-                <div class="col">
+                <div class="col-sm-3">
                     <p>
                         <img src="img/agreement.svg" alt="">
-                        <h4>Якісно</h4>
                     </p>
+                    <h4>Якісно</h4>
                 </div>
-                <div class="col">
+                <div class="col-sm-3">
                     <p>
                         <img src="img/accessory.svg" alt="">
                     </p>
                     <h4>Дешево</h4>
-
                 </div>
-                <div class="col">
+                <div class="col-sm-3">
                     <p>
                         <img src="img/shopping-store.svg" alt="">
                     </p>
                     <h4>Надійно</h4>
-
                 </div>
             </div>
         </div>
@@ -375,48 +373,7 @@
 
     <!-- Bootstrap core JavaScript-->
     <script src="js/bootstrap-native-v4.min.js"></script>
-    <script>
-        var typingSpeed = 50,
-            blinkingSpeed = 400,
-            elements = document.getElementsByClassName("typeit");
-
-        function typeElement(a) {
-            if (!(null == elements || a >= elements.length)) {
-                var b = elements[a],
-                    c = b.textContent;
-                b.innerHTML = "", typeStringInside(b, c), typeElement(a + 1)
-            }
-        }
-
-        function typeStringInside(a, b) {
-            null != b && "" != b && typeCharacterInsideElement(0, a, b)
-        }
-
-        function typeCharacterInsideElement(a, b, c) {
-            if (a >= c.length) typeBlinkingPipe(b);
-            else {
-                var d = c[a];
-                setTimeout(function () {
-                    b.innerHTML += d, typeCharacterInsideElement(a + 1, b, c)
-                }, typingSpeed)
-            }
-        }
-
-        function typeBlinkingPipe(a) {
-            var b = a.innerHTML + "<span class=\"blinking\" style=\"visibility: visible;\">|</span>";
-            setTimeout(function () {
-                a.innerHTML = b, startBlinkingElement(a.getElementsByClassName("blinking")[0])
-            }, typingSpeed)
-        }
-
-        function startBlinkingElement(a) {
-            setInterval(function () {
-                var b = a.style.visibility;
-                a.style.visibility = "hidden" == b ? "visible" : "hidden"
-            }, blinkingSpeed)
-        }
-        typeElement(0);
-    </script>
+    <script>var typingSpeed = 50, blinkingSpeed = 400, elements = document.getElementsByClassName("typeit"); function typeElement(e) { if (!(null == elements || e >= elements.length)) { var f = elements[e], g = f.textContent; f.innerHTML = "", typeStringInside(f, g), typeElement(e + 1) } } function typeStringInside(e, f) { null != f && "" != f && typeCharacterInsideElement(0, e, f) } function typeCharacterInsideElement(e, f, g) { if (e >= g.length) typeBlinkingPipe(f); else { var h = g[e]; setTimeout(function () { f.innerHTML += h, typeCharacterInsideElement(e + 1, f, g) }, typingSpeed) } } function typeBlinkingPipe(e) { var f = e.innerHTML + "<span class=\"blinking\" style=\"visibility: visible;\">|</span>"; setTimeout(function () { e.innerHTML = f, startBlinkingElement(e.getElementsByClassName("blinking")[0]) }, typingSpeed) } function startBlinkingElement(e) { setInterval(function () { var f = e.style.visibility; e.style.visibility = "hidden" == f ? "visible" : "hidden" }, blinkingSpeed) } typeElement(0);</script>
 </body>
 
 </html>
