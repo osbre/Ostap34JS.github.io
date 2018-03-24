@@ -1,1 +1,130 @@
-figcaption,figure img{width:100%;transition:.5s}body{padding-top:3rem;padding-bottom:3rem;color:#5a5a5a}.marketing .col-lg-4{margin-bottom:1.5rem;text-align:center}.marketing h2{font-weight:400}.marketing h1{font-size:50px}.marketing .col-lg-4 p{margin-right:.75rem;margin-left:.75rem}.marketing>.row>.col>h4{font-weight:700}.featurette-divider{margin:5rem 0}.featurette-heading{font-weight:300;line-height:1;letter-spacing:-.05rem}.list li:before,.steps>.col>h4{font-weight:700}@media (min-width:40em){.featurette-heading{font-size:50px}}@media (min-width:62em){.featurette-heading{margin-top:7rem}}header{padding:154px 0 100px}@media (min-width:992px){header{padding:156px 0 100px}}section{padding:150px 0}.list ul,ol{list-style:none}.list li{background:#37BC9B;color:#fff;counter-increment:myCounter;margin:0 0 30px;padding:13px 13px 13px 2em;position:relative;top:1em;border-radius:0 2px 1em 1em;font-size:1.2em;font-family:Constantia}.list li:before,figcaption{position:absolute;text-align:center}.list li:before{content:counter(myCounter,decimal-leading-zero);display:inline-block;font-size:2em;line-height:1.3em;background-color:#48CFAD;padding:10px;top:0;left:-40px;border-radius:50%;font-family:exo}.list li:nth-child(even){background-color:#434A54}.list li li{counter-increment:myCounter2}.list li li:before{content:counter(myCounter2,decimal-leading-zero)}.list li li a{color:#a47878}::-moz-selection{color:#fff;background:#333!important}::selection{color:#fff;background:#333!important}.figure-items{display:flex;flex-wrap:wrap;justify-content:center}figure{position:relative;overflow:hidden}figure img{display:block;max-width:100%}figcaption{bottom:0;left:0;background:rgba(255,255,255,.8);padding:20px;opacity:0;transform:translateY(100%);color:#000}figure:hover figcaption{opacity:1;transform:translateY(0)}@media screen and (max-width:500px){figure figcaption{opacity:1;transform:translateY(0)}}figure:hover img{transform:scale(1.5)}
+/* GLOBAL STYLES
+-------------------------------------------------- */
+
+/* Padding below the footer and lighter body text */
+
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #5a5a5a;
+}
+
+/* MARKETING CONTENT
+  -------------------------------------------------- */
+
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.marketing h2 {
+    font-weight: normal;
+    font-size: 50px;
+    margin-bottom: 3rem;
+}
+
+.marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+
+.marketing>.row>.col>h4 {
+    font-weight: 300;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/* RESPONSIVE CSS
+  -------------------------------------------------- */
+
+@media (min-width: 40em) {
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 62em) {
+    .featurette-heading {
+        margin-top: 7rem;
+    }
+}
+
+header {
+    padding: 154px 0 100px;
+}
+
+@media (min-width: 992px) {
+    header {
+        padding: 156px 0 100px;
+    }
+}
+
+section {
+    padding: 150px 0;
+}
+
+/*
+  Additional chips :)
+  --------------------------*/
+
+::-moz-selection {
+    color: #fff;
+    background: #333 !important;
+}
+
+::selection {
+    color: #fff;
+    background: #333 !important;
+}
+
+/*
+  Portfolio items
+  --------------------------*/
+
+.figure-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+figure {
+    position: relative;
+    overflow: hidden;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    transition: 500ms;
+    max-width: 100%;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, .8);
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 500ms;
+    color: #000;
+}
+
+figure:hover figcaption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 500px) {
+    figure figcaption {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+figure:hover img {
+    transform: scale(1.5);
+}
