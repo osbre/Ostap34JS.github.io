@@ -28,26 +28,14 @@ body {
     margin-left: .75rem;
 }
 
-.marketing>.row>.col>h4 {
+.marketing > .row > .col > h4 {
     font-weight: 300;
-    text-align: center;
+    text-align: left;
     font-size: 1.8rem;
 }
 
 /* RESPONSIVE CSS
   -------------------------------------------------- */
-
-@media (min-width: 40em) {
-    .featurette-heading {
-        font-size: 50px;
-    }
-}
-
-@media (min-width: 62em) {
-    .featurette-heading {
-        margin-top: 7rem;
-    }
-}
 
 header {
     padding: 154px 0 100px;
@@ -60,7 +48,7 @@ header {
 }
 
 section {
-    padding: 150px 0;
+    padding: 140px 0;
 }
 
 /*
@@ -80,51 +68,16 @@ section {
 /*
   Portfolio items
   --------------------------*/
-
-.figure-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.filterDiv {
+    display: none; /* Hidden by default */
 }
 
-figure {
-    position: relative;
-    overflow: hidden;
-}
-
-figure img {
+/* The "show" class is added to the filtered elements */
+.show {
     display: block;
-    width: 100%;
-    transition: 500ms;
-    max-width: 100%;
 }
 
-figcaption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, .8);
-    padding: 20px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: 500ms;
-    color: #000;
-}
-
-figure:hover figcaption {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@media screen and (max-width: 500px) {
-    figure figcaption {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-figure:hover img {
-    transform: scale(1.5);
+.active {
+    background: #1b9448;
+    color: #fff;
 }
