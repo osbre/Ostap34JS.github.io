@@ -15,6 +15,7 @@
     <link href="css/style.css?v=2" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111534223-1"></script>
+    <script src="js/filterSelection.js" charset="utf-8"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -27,23 +28,19 @@
         gtag('config', 'UA-111534223-1');
     </script>
 
-    <!--LiveReload Start-->
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-    <!--LiveReload End-->
-
-    <!--LiveInternet counter--><script type="text/javascript">
+<script type="text/javascript">
 new Image().src = "//counter.yadro.ru/hit?r"+
 escape(document.referrer)+((typeof(screen)=="undefined")?"":
 ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
 screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 ";h"+escape(document.title.substring(0,150))+
-";"+Math.random();</script><!--/LiveInternet-->
+";"+Math.random();</script>
 </head>
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="" onclick="scroll(0,0);">Ostap portfolio</a>
+        <a href="#" class="navbar-brand js-scroll-trigger" onclick="window.scrollTop = 0;">Ostap portfolio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -77,7 +74,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
         <h1>Професійна розробка сайтів</h1>
         <p class="lead typeit">Створюю продаючі сайти для Ваших бізнес проектів</p>
         <p class="lead">
-            <a href="" data-toggle="modal" data-target="#orderModal" class="btn btn-lg btn-success">Зробити
+            <a data-toggle="modal" data-target="#orderModal" class="btn btn-lg btn-success">Зробити
                 замовлення</a>
         </p>
     </div>
@@ -113,7 +110,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 
 <hr class="featurette-divider">
 
-<section id="advantages" style='padding:50px;'>
+<section id="advantages" style="padding:50px;">
     <div class="container marketing">
         <h2 class=" h1 text-center" style="margin-bottom: 3rem;">Чому я?</h2>
         <div class="row text-center" style="font-size:60px;">
@@ -152,7 +149,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
         <h1 class="text-center" style="font-size:55px;">
             <b>Послуги:</b>
         </h1>
-        <div class="row">
+        <div class="row my-service">
             <div class="col-sm-6 col-md-3 mb-4">
                 <div class="card border-primary">
                     <img class="card-img-top" src="img/landing-page.svg" alt="Card image cap">
@@ -222,7 +219,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
     <div class="container marketing">
         <h1 class="text-center">Останні роботи:</h1>
         <!-- Control buttons -->
-        <div id="myBtnContainer">
+        <div id="myBtnContainer" class="portfolio-works">
             <button class="btn active" onclick="filterSelection('all')"> Всі</button>
             <button class="btn" onclick="filterSelection('landings')"> Лендінги</button>
             <button class="btn" onclick="filterSelection('projects')"> Проекти</button>
@@ -256,8 +253,8 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
                       <a href="http://medical-ua.herokuapp.com/">
                         <img src="img/medical-min.PNG" alt="todo-list">
                       </a>
-                        <div class="card-body">                          
-                          
+                        <div class="card-body">
+
                           <!-- Modal -->
                         <div class="modal fade" id="projectMedical" tabindex="-1" role="dialog" aria-labelledby="projectMedicalLabel" aria-hidden="true">
                           <div class="modal-dialog" role="document">
@@ -275,19 +272,19 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
                                   <p>Доступи:</p>
                                   <p>
                                       <a href="http://medical-ua.herokuapp.com/doctor">Лікар:</a>
-                                      <br>Емейл:  admin@gmail.com 
-                                      <br>Пароль: 12345678  
+                                      <br>Емейл:  admin@gmail.com
+                                      <br>Пароль: 12345678
                                   </p>
                                   <p>
                                     <a href="http://medical-ua.herokuapp.com/admin">Адміністратор:</a>
-                                    <br>Емейл:  admin@gmail.com 
-                                    <br>Пароль: 12345678                            
+                                    <br>Емейл:  admin@gmail.com
+                                    <br>Пароль: 12345678
                                   </p>
                               </div>
                             </div>
                           </div>
                         </div>
-                          
+
                         </div>
                         <div class="card-footer">
                             <h5 class="card-title">
@@ -332,7 +329,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
                 </a>
             </div>
             <div class="filterDiv projects col-lg-4">
-                <a href="shaalavim.com">
+                <a href="http://www.shaalavim.com">
                     <div class="card">
                         <img src="img/germany-movies-min.png" alt="germany-movies">
 
@@ -344,59 +341,22 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
             </div>
         </div>
         <script>
-            filterSelection("all");
-
-            function filterSelection(c) {
-                var x, i;
-                x = document.getElementsByClassName("filterDiv");
-                if (c == "all") c = "";
-                // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-                for (i = 0; i < x.length; i++) {
-                    w3RemoveClass(x[i], "show");
-                    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-                }
-            }
-
-            // Show filtered elements
-            function w3AddClass(element, name) {
-                var i, arr1, arr2;
-                arr1 = element.className.split(" ");
-                arr2 = name.split(" ");
-                for (i = 0; i < arr2.length; i++) {
-                    if (arr1.indexOf(arr2[i]) == -1) {
-                        element.className += " " + arr2[i];
-                    }
-                }
-            }
-
-            // Hide elements that are not selected
-            function w3RemoveClass(element, name) {
-                var i, arr1, arr2;
-                arr1 = element.className.split(" ");
-                arr2 = name.split(" ");
-                for (i = 0; i < arr2.length; i++) {
-                    while (arr1.indexOf(arr2[i]) > -1) {
-                        arr1.splice(arr1.indexOf(arr2[i]), 1);
-                    }
-                }
-                element.className = arr1.join(" ");
-            }
-
+            filterSelection('all');
             // Add active class to the current control button (highlight it)
-            var btnContainer = document.getElementById("myBtnContainer");
-            var btns = btnContainer.getElementsByClassName("btn");
+            var btnContainer = document.getElementById('myBtnContainer');
+            var btns = btnContainer.getElementsByClassName('btn');
             for (var i = 0; i < btns.length; i++) {
-                btns[i].addEventListener("click", function () {
-                    var current = document.getElementsByClassName("active");
-                    current[0].className = current[0].className.replace(" active", "");
-                    this.className += " active";
+                btns[i].addEventListener('click', function () {
+                    var current = document.getElementsByClassName('active');
+                    current[0].classList.remove('active')
+                    this.classList.add('active')
                 });
             }
         </script>
     </div>
 </section>
 
-<section id='developmentSteps'>
+<section id="developmentSteps">
     <div class="container marketing">
         <h1 class="text-center">Як проходитиме розробка?</h1>
         <br>
@@ -425,7 +385,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
 
 <section id="contact" class="bg-light">
     <div class="container">
-        <h1 class='text-center'>Зв'язатися:</h1>
+        <h1 class="text-center">Зв'язатися:</h1>
         <div class="mx-auto" style="max-width: 400px;">
             <a href="" data-toggle="modal" data-target="#contactModal"
                class="btn btn-block btn-lg btn-info">Звʼязатися</a>
