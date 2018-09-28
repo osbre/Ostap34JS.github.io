@@ -83,3 +83,15 @@ img{
     background: #1b9448;
     color: #fff;
 }
+
+#myBtnContainer {
+  margin-bottom: 20px;
+}
+
+.my-service {
+  margin-top: 30px;
+}
+
+.portfolio-works {
+  margin-top: 30px;
+}
